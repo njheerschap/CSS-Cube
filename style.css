@@ -15,10 +15,6 @@
     transform-style: preserve-3d;
 }
 
-/* .cube:hover {
-    transform: rotateX(-270deg);
-} */
-
 .front,
 .back,
 .left,
