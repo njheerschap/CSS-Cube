@@ -2,17 +2,44 @@
     box-sizing: border-box;
 }
 
+/*---- Main Styles ----*/
+
+body {
+    margin: 0;
+    background-color: #f7f7f7;
+}
+
+h1, 
+p {
+    text-align: center;
+}
+
+h1 {
+    height: 10vh;
+    padding-top: 4vh;
+    margin-top: 0;
+    background-color: #00083d;
+    color: #fff;
+}
+/*---- 3D Cube Styles ----*/
+
 .container {
-    max-width: 200px;
-    margin: 25vh auto 5rem;
+    max-width: 250px;
+    margin: 15vh auto 10rem;
+    text-align: center;
     perspective: 700px;
 }
 
 .cube {
-    transition: transform 2s ease-out;
-    width: 450px;
-    height: 450px;
+    transition: transform 2s ease-in-out;
+    width: 250px;
+    height: 250px;
     transform-style: preserve-3d;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
 }
 
 .front,
@@ -28,33 +55,34 @@
 }
 
 .front {
-    transform: translateZ(225px);
+    transform: translateZ(125px);
 }
 
 .back {
-    transform: rotateZ(180deg) translateZ(-225px);
+    transform: rotateZ(180deg) translateZ(-125px);
 }
 
 .left {
-    transform: rotateY(-90deg) translateZ(-225px);
+    transform: rotateY(-90deg) translateZ(-125px);
 }
 
 .right {
-    transform: rotateY(90deg) rotateZ(90deg) translateZ(-225px);
+    transform: rotateY(90deg) rotateZ(90deg) translateZ(-125px);
 }
 
 .top {
-    transform: rotateX(90deg) translateZ(225px);
+    transform: rotateX(90deg) translateZ(125px);
 }
 
 .bottom {
-    transform: rotateX(90deg) rotateZ(180deg) translatez(-225px);
+    transform: rotateX(90deg) rotateZ(180deg) translatez(-125px);
 }
 
 input {
     display: inline-block;
+    margin: 0 auto;
     margin-bottom: 50px;
-    transform: translateZ(225px);
+    transform: translateZ(125px);
 }
 
 .c:checked ~ .cube {
@@ -75,4 +103,8 @@ input {
 
 .e:checked ~ .cube {
     transform: rotateX(270deg) rotateY(-90deg) rotateZ(270deg);
+}
+
+.f:checked ~ .cube {
+    transform: rotateY(0deg);
 }
