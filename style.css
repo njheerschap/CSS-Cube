@@ -15,8 +15,7 @@ p {
 }
 
 h1 {
-    height: 10vh;
-    padding-top: 4vh;
+    padding: 20px 0;
     margin-top: 0;
     background-color: #c8e6f8;
     color: rgb(2, 0, 71);
